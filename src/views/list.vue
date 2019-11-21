@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Alert>学生</Alert>
         <Table border ref="selection" :columns="columns4" :data="data1"></Table>
         <Button @click="handleSelectAll(true)">Set all selected</Button>
         <Button @click="handleSelectAll(false)">Cancel all selected</Button>

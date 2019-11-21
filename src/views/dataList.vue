@@ -1,7 +1,6 @@
 <template>
     <div class="app-cont">
-            <div class="vue-resource">
-            <Alert>获取其他地址里的json数据并进遍历</Alert>
+            <Alert>费用管理</Alert>
             <!--
             <ul>
                 <li v-for="item in arrs">               
@@ -12,7 +11,6 @@
             </ul>
             -->
         <Table border ref="selection" :columns="columns4" :data="data1"></Table>
-        </div>
     </div>
 </template>
 <script>
