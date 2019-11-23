@@ -42,7 +42,7 @@
                         <MenuItem name="2">
                             <Icon type="ios-keypad"></Icon>
                           
-                             <router-link to="/data">费用管理</router-link>
+                             <router-link to="/data">课程管理</router-link>
                         </MenuItem>
                         <MenuItem name="3">
                             <Icon type="ios-analytics"></Icon>   
@@ -57,9 +57,6 @@
             </Header>
             <Layout :style="{padding: '0 50px'}">
                 <Breadcrumb :style="{margin: '16px 0'}">
-                    <BreadcrumbItem>培训通</BreadcrumbItem>
-                    <BreadcrumbItem>{{ level2 }}</BreadcrumbItem>
-                    <BreadcrumbItem>{{ level3 }}</BreadcrumbItem>
                 </Breadcrumb>
                 <Content :style="{padding: '24px 0', minHeight: '280px', background: '#fff'}">
                     <Layout>
@@ -76,10 +73,13 @@
                                 <Submenu name="2">
                                     <template slot="title">
                                         <Icon type="ios-keypad"></Icon>
-                                        费用管理
+                                        课程管理
                                     </template>
-                                    <MenuItem name="2-1">添加费用</MenuItem>
-                                    <MenuItem name="2-2">费用列表</MenuItem>
+                                    <MenuItem name="2-1">添加新课</MenuItem>
+                                    <MenuItem name="2-2">课程列表</MenuItem>
+                                       <MenuItem name="2-3">预约试听</MenuItem>
+                                      <MenuItem name="2-3">正在进行</MenuItem>
+                                       <MenuItem name="2-3">已经完成</MenuItem>
                                 </Submenu>
                                 <Submenu name="3">
                                     <template slot="title">
@@ -100,5 +100,14 @@
             <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
         </Layout>
     </div>
-</div>
 </template>
+<script>
+ import Breadcrumb from "@/components/Breadcrumb"
+ export default {
+    name:'LayOut',
+    components:{
+        Breadcrumb
+    }
+}
+</script>
+

@@ -4,6 +4,7 @@ import HelloWorld from '@/views/HelloWorld'
 import Login from '@/views/Login'
 import List from '@/views/List'
 import DataList from '@/views/DataList'
+import DataDetail from '@/views/DataDetail'
 Vue.use(Router)
 
 export default new Router({
@@ -23,7 +24,20 @@ export default new Router({
     },{
       path: '/data', //http://localhost:8080/#/data
       name: 'DataList',
-      component: DataList
-    }
+      component: DataList,
+      meta:{
+        name:["课程管理","课程列表"],
+        path:'/data'
+      }}, 
+        {
+          path:'/data/:id',
+          name:'DataDetail',
+          component:DataDetail,
+          meta:{
+            name:["课程管理","课程列表","课程详细"],
+            path:'/data/:id',
+          }
+        }
+    
   ]
 })
