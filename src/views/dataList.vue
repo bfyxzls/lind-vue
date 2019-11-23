@@ -14,10 +14,12 @@
     </div>
 </template>
 <script>
+ 
     export default{
-        name: "app-cont",
+        name: "layout",
         data () {
             return {
+                
                  columns4: [
                     {
                         type: 'selection',
@@ -42,7 +44,9 @@
                     }
                     
                 ],
-                data1:[]
+                data1:[],
+                level2:"费用管理",
+                level3:"费用列表"
                 
             }
         },
@@ -57,7 +61,8 @@
                 arrs.push(data.body[i]);
              }
               this.data1=arrs;
-            
+            this.level2="费用管理";
+             this.level3="费用列表";
             })
         }
     }
