@@ -48,8 +48,8 @@ html,body {
                     <Input type="password" v-model="loginData.pass" placeholder="请输入密码"></Input>
                 </FormItem>
                 <FormItem class="form-footer">
-                    <Button type="primary" @click="handleSubmit('loginData')">Submit</Button>
-                    <Button @click="handleReset('loginData')" style="margin-left: 8px">Reset</Button>
+                    <Button type="primary" @click="handleSubmit('loginData')">登录</Button>
+                    <Button @click="handleReset('loginData')" style="margin-left: 8px">清除</Button>
                 </FormItem>
             </Form>
         </div>
