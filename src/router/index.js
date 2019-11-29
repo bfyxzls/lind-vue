@@ -7,6 +7,8 @@ import DataList from '@/views/DataList'
 import DataDetail from '@/views/DataDetail'
 import Register from '@/views/Register'
 import TestVue from '@/views/Test'
+import Label from '@/views/Label'
+import Tab from '@/views/Tab'
 Vue.use(Router)
 
 export default new Router({
@@ -54,6 +56,17 @@ export default new Router({
       name: 'test',
       component: TestVue
     }
-
+    ,
+    {
+      path:'/label',
+      name: 'label',
+      component: Label
+    }
+    ,
+    {
+      path:'/tab',
+      name: 'ta',
+      component: Tab
+    }
   ]
 })

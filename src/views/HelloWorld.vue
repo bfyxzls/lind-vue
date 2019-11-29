@@ -1,113 +1,76 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
-  </div>
+ <div class="hello">
+    <Form :model="formItem" :label-width="80">
+        <FormItem label="Input">
+            <Input v-model="formItem.input" placeholder="Enter something..."/>
+        </FormItem>
+        <FormItem label="Select">
+            <Select v-model="formItem.select">
+                <Option value="beijing">New York</Option>
+                <Option value="shanghai">London</Option>
+                <Option value="shenzhen">Sydney</Option>
+            </Select>
+        </FormItem>
+        <FormItem label="DatePicker">
+   
+               
+                    <DatePicker type="date" placeholder="Select date" v-model="formItem.date"></DatePicker>
+               
+                -
+             
+                    <TimePicker type="time" placeholder="Select time" v-model="formItem.time"></TimePicker>
+         
+        </FormItem>
+        <FormItem label="Radio">
+            <RadioGroup v-model="formItem.radio">
+                <Radio label="male">Male</Radio>
+                <Radio label="female">Female</Radio>
+            </RadioGroup>
+        </FormItem>
+        <FormItem label="Checkbox">
+            <CheckboxGroup v-model="formItem.checkbox">
+                <Checkbox label="Eat"></Checkbox>
+                <Checkbox label="Sleep"></Checkbox>
+                <Checkbox label="Run"></Checkbox>
+                <Checkbox label="Movie"></Checkbox>
+            </CheckboxGroup>
+        </FormItem>
+        <FormItem label="Switch">
+            <i-switch v-model="formItem.switch" size="large">
+                <span slot="open">On</span>
+                <span slot="close">Off</span>
+            </i-switch>
+        </FormItem>
+        <FormItem label="Slider">
+            <Slider v-model="formItem.slider" range></Slider>
+        </FormItem>
+        <FormItem label="Text">
+            <Input v-model="formItem.textarea" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="Enter something..." />
+        </FormItem>
+        <FormItem>
+            <Button type="primary">Submit</Button>
+            <Button style="margin-left: 8px">Cancel</Button>
+        </FormItem>
+    </Form>
+    </div>
 </template>
-
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    export default {
+      name:"hello",
+        data () {
+            return {
+                formItem: {
+                    input: '',
+                    select: '',
+                    radio: 'male',
+                    checkbox: [],
+                    switch: true,
+                    date: '',
+                    time: '',
+                    slider: [20, 50],
+                    textarea: ''
+                }
+            }
+        }
     }
-  }
-}
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>

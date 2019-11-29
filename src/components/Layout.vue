@@ -46,7 +46,7 @@
             </MenuItem>
              <MenuItem name="3">
               <Icon type="ios-keypad"></Icon>
-              <router-link to="/data">老师管理</router-link>
+              <router-link to="/tab">老师管理</router-link>
             </MenuItem>
             <MenuItem name="4">
               <Icon type="ios-paper"></Icon>
@@ -54,7 +54,7 @@
             </MenuItem>
                <MenuItem name="5">
               <Icon type="ios-analytics"></Icon>
-              <router-link to="/hello">活动管理</router-link>
+              <router-link to="/label">活动管理</router-link>
             </MenuItem>
             <MenuItem name="6">
               <Icon type="ios-paper"></Icon>
