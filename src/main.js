@@ -6,20 +6,13 @@ import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import VueResource from 'vue-resource'
-/* eslint-disable no-new */
-import Vuex from 'vuex';
-import store from '@/vuex/store';
-
 Vue.config.productionTip = false
 Vue.use(iView)
 Vue.use(VueResource);
-Vue.use(Vuex);
 /* eslint-disable no-new */
-
 new Vue({
   el: '#app',
   router,
-  store,
   components: { App },
   template: '<App/>'
 })

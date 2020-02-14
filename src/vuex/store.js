@@ -8,8 +8,7 @@ const store = new Vuex.Store({
   state: {
     clientHeight: document.documentElement.clientHeight,
     clientWidth: document.documentElement.clientWidth,
-    address: window.location.pathname,
-    message:1
+    adress: window.location.pathname,
   }
 
 })
