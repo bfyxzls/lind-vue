@@ -1,3 +1,6 @@
+# 项目介绍
+主要学习前端vue技术的的项目
+
 # lind-vue
 
 > A Vue.js project

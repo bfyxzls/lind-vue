@@ -44,7 +44,7 @@
               <Icon type="ios-keypad"></Icon>
               <router-link to="/data">课程管理</router-link>
             </MenuItem>
-             <MenuItem name="3">
+            <MenuItem name="3">
               <Icon type="ios-keypad"></Icon>
               <router-link to="/tab">老师管理</router-link>
             </MenuItem>
@@ -52,14 +52,13 @@
               <Icon type="ios-paper"></Icon>
               <router-link to="/hello">考勤管理</router-link>
             </MenuItem>
-               <MenuItem name="5">
+            <MenuItem name="5">
               <Icon type="ios-analytics"></Icon>
               <router-link to="/label">活动管理</router-link>
             </MenuItem>
             <MenuItem name="6">
               <Icon type="ios-paper"></Icon>
-              <router-link to="/login">登录</router-link>
-              /
+              <router-link to="/login">登录</router-link>/
               <router-link to="/register">注册</router-link>
             </MenuItem>
           </div>
@@ -88,7 +87,7 @@
                   <MenuItem name="2-3">正在进行</MenuItem>
                   <MenuItem name="2-3">已经完成</MenuItem>
                 </Submenu>
-                  <Submenu name="3">
+                <Submenu name="3">
                   <template slot="title">
                     <Icon type="ios-analytics"></Icon>老师管理
                   </template>
@@ -103,7 +102,7 @@
                   <MenuItem name="3-1">学生考勤</MenuItem>
                   <MenuItem name="3-2">老师考勤</MenuItem>
                 </Submenu>
-                 <Submenu name="3">
+                <Submenu name="3">
                   <template slot="title">
                     <Icon type="ios-analytics"></Icon>活动管理
                   </template>
