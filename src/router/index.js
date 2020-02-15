@@ -9,6 +9,7 @@ import Register from '@/views/Register'
 import TestVue from '@/views/Test'
 import Label from '@/views/Label'
 import Tab from '@/views/Tab'
+import AddUser from '@/views/AddUser'
 Vue.use(Router)
 
 export default new Router({
@@ -67,6 +68,11 @@ export default new Router({
       path:'/tab',
       name: 'ta',
       component: Tab
+    },
+    {
+      path: '/addUser',
+      name: 'AddUser',
+      component: AddUser
     }
   ]
 })
