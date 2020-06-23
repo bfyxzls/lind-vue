@@ -10,6 +10,8 @@ import TestVue from '@/views/Test'
 import Label from '@/views/Label'
 import Tab from '@/views/Tab'
 import AddUser from '@/views/AddUser'
+import TestGrammer from '@/views/test-grammer'
+
 Vue.use(Router)
 
 export default new Router({
@@ -53,19 +55,19 @@ export default new Router({
       }
     },
     {
-      path:'/test',
+      path: '/test',
       name: 'test',
       component: TestVue
     }
     ,
     {
-      path:'/label',
+      path: '/label',
       name: 'label',
       component: Label
     }
     ,
     {
-      path:'/tab',
+      path: '/tab',
       name: 'ta',
       component: Tab
     },
@@ -73,6 +75,11 @@ export default new Router({
       path: '/addUser',
       name: 'AddUser',
       component: AddUser
-    }
+    },
+    {
+      path: '/test-grammer',
+      name: 'test-grammer',
+      component: TestGrammer
+    },
   ]
 })
