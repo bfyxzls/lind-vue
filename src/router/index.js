@@ -11,7 +11,6 @@ import Label from '@/views/Label'
 import Tab from '@/views/Tab'
 import AddUser from '@/views/AddUser'
 import TestGrammer from '@/views/test-grammer'
-
 Vue.use(Router)
 
 export default new Router({

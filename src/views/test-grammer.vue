@@ -2,17 +2,24 @@
   <div>
     <Input type="text" v-model="message" clearable placeholder="请输入用户名" style="width: 200px" />
     {{full}}
-    <br />
-    len:  <Input type="text" v-model="len" />
-    width: <Input type="text" v-model="width" />
-    area:  <input v-model="areas" type="text" />
+    <br />len:
+    <Input type="text" v-model="len" />width:
+    <Input type="text" v-model="width" />area:
+    <input v-model="areas" type="text" />
+
+    <testComponent my-message="hello" @abcClick="sayHello"></testComponent>从子组件向父页面修改值：
   </div>
 </template>
 <script>
+import testComponent from "@/components/testComponent";
+
 export default {
-  name: "test-manage",
+  name: "test-grammer",
   props: {
     //接收父组件传递过来的参数
+  },
+  components: {
+    testComponent
   },
   data() {
     // 定义变量
@@ -27,6 +34,9 @@ export default {
     //事件方法执行
     init() {
       message = "hello world!";
+    },
+    sayHello(Num, Str) {
+      console.log("hello world~~" + Num + Str);
     }
   },
   created() {
